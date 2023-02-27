@@ -34,7 +34,7 @@ Then wrap the `<Marquee>` tags around any component or text you'd like to slide.
 
 ```tsx
 <Marquee>
-  I can be a Solid component, multiple React components, or just some text.
+  I can be a Solid component, multiple Solid components, or just some text.
 </Marquee>
 ```
 
