@@ -1,17 +1,17 @@
 {
   "version": "0.0.0",
-  "name": "{{name_of_lib}}",
-  "description": "{{desc_of_lib}}",
+  "name": "solid-marquee",
+  "description": "A lightweight Solid component that utilizes the power of CSS animations to create silky smooth marquees. ",
   "license": "MIT",
-  "author": "{{me}}",
+  "author": "Jcanotorr06",
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{{me}}/{{name_of_lib}}.git"
+    "url": "git+https://github.com/Jcanotorr06/solid-marquee.git"
   },
-  "homepage": "https://github.com/{{me}}/{{name_of_lib}}#readme",
+  "homepage": "https://github.com/Jcanotorr06/solid-marquee#readme",
   "bugs": {
-    "url": "https://github.com/{{me}}/{{name_of_lib}}/issues"
+    "url": "https://github.com/Jcanotorr06/solid-marquee/issues"
   },
   "files": [
     "dist"
@@ -57,6 +57,7 @@
     "solid-js": "^1.6.0"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "concurrently": "^7.6.0",
     "esbuild": "^0.17.4",
     "esbuild-plugin-solid": "^0.5.0",
