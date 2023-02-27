@@ -1,36 +1,83 @@
-<p>
-  <img width="100%" src="https://assets.solidjs.com/banner?type={{name_of_lib}}&background=tiles&project=%20" alt="{{name_of_lib}}">
-</p>
-
-# {{name_of_lib}}
+![solidjs card](https://assets.solidjs.com/banner?type=solid-marquee&background=tiles&project=%20)
 
 [![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-cc00ff.svg?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
+![NPM](https://img.shields.io/npm/l/solid-marquee?style=for-the-badge)
+![package bundle size](https://img.shields.io/bundlephobia/minzip/solid-marquee?label=Size&style=for-the-badge)
+![package version](https://img.shields.io/npm/v/solid-marquee?label=version&style=for-the-badge)
+![npm downloads](https://img.shields.io/npm/dw/solid-marquee?style=for-the-badge)
 
-{{desc_of_lib}}
-
-> **Note** After using this template, you have to search and replace all `{{name_of_lib}}` and similar strings
-> with appropriate texts.
->
-> `{{name_of_lib}}` should be a **kebab-case** string representing the name of you monorepo.
->
-> `{{desc_of_lib}}` should be a **Normal case** string with the description of the repository.
->
-> `{{me}}` should be a **kebab-case** string from your profile URL.
+A lightweight Solid component that utilizes the power of CSS animations to create silky smooth marquees. 
 
 ## Quick start
 
 Install it:
 
 ```bash
-npm i {{name_of_lib}}
+npm i solid-marquee
 # or
-yarn add {{name_of_lib}}
+yarn add solid-marquee
 # or
-pnpm add {{name_of_lib}}
+pnpm add solid-marquee
 ```
 
-Use it:
+## Usage
+
+To use the component, first import `Marquee` into your file using either the default import or named import
 
 ```tsx
-import {{name_of_lib}} from '{{name_of_lib}}'
+import Marquee from "solid-marquee"
+// or
+import { Marquee } from "solid-marquee"
 ```
+
+Then wrap the `<Marquee>` tags around any component or text you'd like to slide.
+
+```tsx
+<Marquee>
+  I can be a Solid component, multiple React components, or just some text.
+</Marquee>
+```
+
+A sample file might look like this:
+
+```tsx
+import MyComponent from "../components/MyComponent"
+import Marquee from "solid-marquee"
+
+const App = () => {
+  return (
+    <Marquee>
+      <MyComponent/>
+      <MyComponent/>
+      <MyComponent/>
+    </Marquee>
+  )
+}
+
+export default App
+```
+
+## Props
+
+| Property        | Type                        | Default           | Description                                              |
+| :-------------- | :-------------------------- | :---------------- | :------------------------------------------------------- |
+| `style`         | `object`                    | `{}`              | Inline style for the container div                       |
+| `className`     | `string`                    | `""`              | Name of the css class to style the container div         |
+| `play`          | `boolean`                   | `true`            | Whether to play or pause the marquee                     |
+| `pauseOnHover`  | `boolean`                   | `false`           | Whether to pause the marquee when hovered                |
+| `pauseOnClick`  | `boolean`                   | `false`           | Whether to pause the marquee when clicked                |
+| `direction`     | `"left"` or `"right"`       | `"left"`          | The direction the marquee is sliding                     |
+| `speed`         | `number`                    | `20`              | Speed calculated as pixels/second                        |
+| `delay`         | `number`                    | `0`               | Duration to delay the animation after render, in seconds |
+| `iterations`          | `number`                    | `0`               | The number of times the marquee should loop, 0 is equivalent to infinite         |
+| `onFinish` | `Function` | `null` | A callback for when the marquee finishes scrolling and stops. Only calls if loop is non-zero.    |
+| `onCycleComplete` | `Function`        | `null`             | A callback for when the marquee finishes a loop. Does not call if maximum loops are reached (use onFinish instead).                 |
+| `children`      | `ReactNode`                 | `null`            | The children rendered inside the marquee                 |
+
+## Contributors
+
+[![contributors](https://contrib.rocks/image?repo=jcanotorr06/solid-marquee)](https://github.com/jcanotorr06/solid-marquee/graphs/contributors)
+
+## Licence
+
+[MIT](LICENSE)
