@@ -1,5 +1,5 @@
 {
-  "version": "0.0.0",
+  "version": "1.0.0",
   "name": "solid-marquee",
   "description": "A lightweight Solid component that utilizes the power of CSS animations to create silky smooth marquees. ",
   "license": "MIT",
